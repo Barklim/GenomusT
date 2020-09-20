@@ -1,0 +1,33 @@
+{
+  "name": "g-app",
+  "version": "0.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "engines": {
+    "node": "8.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^3.6.1",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.0",
+    "jsonwebtoken": "^8.5.1",
+    "macaddress": ">=0.2.9",
+    "moment-js": "^1.1.15",
+    "mongoose": "^4.13.18",
+    "nodemon": "^1.19.0",
+    "tar": ">=4.4.2"
+  },
+  "devDependencies": {}
+}
